@@ -6,26 +6,21 @@
 /*   By: jelefebv <jelefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/14 18:04:57 by jelefebv          #+#    #+#             */
-/*   Updated: 2014/11/19 11:20:19 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/11/26 18:05:46 by jelefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {
 	char			*str;
-	unsigned int	i;
 
-	i = 0;
-	str = malloc(sizeof(char) * size + 1);
+	str = malloc(size);
 	if (!str)
 		return (NULL);
-	while (i <= size + 1)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	ft_bzero(str, size + 1);
 	return (str);
 }

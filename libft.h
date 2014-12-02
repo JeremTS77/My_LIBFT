@@ -6,7 +6,7 @@
 /*   By: jelefebv <jelefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 11:12:09 by jelefebv          #+#    #+#             */
-/*   Updated: 2014/11/26 15:53:37 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/11/26 17:36:17 by jelefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <string.h>
 
-char	**ft_strsplit(char *s, char c);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);

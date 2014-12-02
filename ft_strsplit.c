@@ -6,14 +6,14 @@
 /*   By: jelefebv <jelefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 17:24:58 by jelefebv          #+#    #+#             */
-/*   Updated: 2014/11/26 16:04:59 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/11/26 19:16:07 by jelefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int		ft_nbr_tab(char *s, char c)
+static int		ft_nbr_tab(char const *s, char c)
 {
 	int		i;
 	int		m;
@@ -34,7 +34,7 @@ static int		ft_nbr_tab(char *s, char c)
 	return (m);
 }
 
-static char		**ft_create_tab(char **split, char *s, char c, int m)
+static char		**ft_creat_tab(char **split, char const *s, char c, int m)
 {
 	int				i;
 	int				j;
@@ -62,7 +62,7 @@ static char		**ft_create_tab(char **split, char *s, char c, int m)
 	return (split);
 }
 
-char			**ft_strsplit(char *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		m;
 	char	**split;
@@ -75,7 +75,7 @@ char			**ft_strsplit(char *s, char c)
 		split = (char **)malloc((sizeof(char *) * (m + 10)));
 		if (split == NULL)
 			return (NULL);
-		split = ft_create_tab(split, s, c, m);
+		split = ft_creat_tab(split, s, c, m);
 		return (split);
 	}
 }
