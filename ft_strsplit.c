@@ -67,7 +67,7 @@ char			**ft_strsplit(char const *s, char c)
 	int		m;
 	char	**split;
 
-	if (!s || s[0] == '\0' || c == '\0')
+	if (!s || c == '\0')
 		return (NULL);
 	else
 	{
