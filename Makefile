@@ -76,9 +76,8 @@ SRC_O		=	$(SRC_C:.c=.o)
 all:		$(NAME)
 	echo "\033[38;5;44m☑️  ALL    $(NAMEBASE) is done\033[0m\033[K"
 
-$(NAME):
+$(NAME): $(SRC_O)
 	printf "\r\033[38;5;11m⌛  MAKE   $(NAMEBASE) plz wait ...\033[0m\033[K"
-	$(CC) $(FLAGS) -c $(SRC_C)
 	ar rc $(NAME) $(SRC_O)
 	ranlib $(NAME)
 	echo -en "\r\033[38;5;22m☑️  MAKE   $(NAMEBASE)\033[0m\033[K"

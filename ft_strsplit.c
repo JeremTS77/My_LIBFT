@@ -6,7 +6,7 @@
 /*   By: jelefebv <jelefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 17:24:58 by jelefebv          #+#    #+#             */
-/*   Updated: 2014/11/26 19:16:07 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/12/10 00:16:45 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char		**ft_creat_tab(char **split, char const *s, char c, int m)
 		j++;
 		m--;
 	}
-	split[j] = '\0';
+	split[j] = 0;
 	return (split);
 }
 
@@ -72,7 +72,7 @@ char			**ft_strsplit(char const *s, char c)
 	else
 	{
 		m = ft_nbr_tab(s, c);
-		split = (char **)malloc((sizeof(char *) * (m + 10)));
+		split = (char **)malloc((sizeof(char *) * (m + 1)));
 		if (split == NULL)
 			return (NULL);
 		split = ft_creat_tab(split, s, c, m);
