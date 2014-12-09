@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2014/12/09 14:29:32 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/12/10 00:52:41 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,13 +91,13 @@ int	uf_test_memccpy(void);
 int	uf_test_memcpy(void);
 int	uf_test_memset(void);
 int	uf_test_bzero(void);
-int	uf_test_lstnew(void);
+/*int	uf_test_lstnew(void);
 int	uf_test_lstdelone(void);
 int	uf_test_lstdel(void);
 int	uf_test_lstadd(void);
 int	uf_test_lstiter(void);
 int uf_test_lstmap(void);
-
+*/
 typedef struct	s_test
 {
 	const char	*name;
@@ -220,7 +220,7 @@ int					main(int argc, const char **argv)
 	D_ADD_TEST(itoa);
 #define	D_STRTRIM
 	D_ADD_TEST(strtrim);
-#define	D_LSTNEW
+/*#define	D_LSTNEW
 	D_ADD_TEST(lstnew);
 #define	D_LSTDELONE
 	D_ADD_TEST(lstdelone);
@@ -231,7 +231,7 @@ int					main(int argc, const char **argv)
 #define	D_LSTITER
 	D_ADD_TEST(lstiter);
 #define D_LSTMAP
-	D_ADD_TEST(lstmap);
+	D_ADD_TEST(lstmap)*/;
 	while (test[i].set == true)
 	{
 		printf("Test [%s] : ", test[i].name);
@@ -255,7 +255,7 @@ void	uf_del_callback(void *d, size_t s)
 /*
 ** Thx pmotte for the test
 */
-
+/*
 #ifdef  D_LSTMAP
 
 t_list		*uf_testmap(t_list *elem)
@@ -418,7 +418,7 @@ int					uf_test_lstnew(void)
 	return (1);
 }
 #endif
-
+*/
 int					uf_free_tab(void **tab)
 {
 	unsigned int	i;

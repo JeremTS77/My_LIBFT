@@ -6,7 +6,7 @@
 /*   By: jelefebv <jelefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/15 18:50:42 by jelefebv          #+#    #+#             */
-/*   Updated: 2014/11/26 18:38:08 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/12/10 00:46:53 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char	*ptr;
-	size_t	i;
+	unsigned char	*ptr;
+	size_t			i;
 
 	i = 0;
-	if (size == 0)
-		return (NULL);
 	ptr = (void *)malloc(size);
 	if (!ptr)
 		return (NULL);
@@ -29,5 +27,5 @@ void	*ft_memalloc(size_t size)
 		ptr[i] = 0;
 		i++;
 	}
-	return (ptr);
+	return ((void *)ptr);
 }

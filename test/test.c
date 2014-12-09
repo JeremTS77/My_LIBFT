@@ -6,7 +6,7 @@
 /*   By: jelefebv <jelefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/17 15:29:32 by jelefebv          #+#    #+#             */
-/*   Updated: 2014/12/09 14:27:18 by jelefebv         ###   ########.fr       */
+/*   Updated: 2014/12/10 00:48:22 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@
 #define UNULINE	"\033[24m"
 
 /* Comment out to remove the NULL tests */
-//#define SEGFAULT_ME
+#define SEGFAULT_ME
 /* If the test segfaults, try skipping the NULL tests */
 /* to see if they are the ones giving you a hard time */
 
